@@ -1,0 +1,34 @@
+[
+  {
+    "name": "Classic Burger",
+    "type": "burger",
+    "ingredients": ["pane", "manzo", "lattuga", "pomodoro", "formaggio"],
+    "allergens": ["glutine", "latte"],
+    "imageUrl": "/images/classic-burger.jpg",
+    "basePrice": 7.5
+  },
+  {
+    "name": "Chicken Wrap",
+    "type": "wrap",
+    "ingredients": ["tortilla", "pollo", "insalata", "salsa yogurt"],
+    "allergens": ["glutine", "latte"],
+    "imageUrl": "/images/chicken-wrap.jpg",
+    "basePrice": 6.8
+  },
+  {
+    "name": "Vegan Bowl",
+    "type": "bowl",
+    "ingredients": ["riso", "ceci", "avocado", "verdure grigliate"],
+    "allergens": [],
+    "imageUrl": "/images/vegan-bowl.jpg",
+    "basePrice": 8.2
+  },
+  {
+    "name": "Patatine",
+    "type": "contorno",
+    "ingredients": ["patate", "olio", "sale"],
+    "allergens": [],
+    "imageUrl": "/images/fries.jpg",
+    "basePrice": 3.0
+  }
+]
