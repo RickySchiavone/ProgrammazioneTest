@@ -3,24 +3,55 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FastFood - Scegli il tuo ruolo</title>
+  <title>FastFood - Login</title>
   <link rel="stylesheet" href="fastfood/css/style.css">
 </head>
-<body class="role-choice">
-  <!-- Unico punto di ingresso dell'app per scegliere il tipo di esperienza. -->
-  <main class="choice-page">
-    <section class="choice-card" aria-labelledby="app-title">
-      <p class="choice-eyebrow">Ordina, gestisci, cresci</p>
-      <h1 id="app-title">FastFood</h1>
-      <p class="choice-description">
-        Usa questa pagina come unico index per spostarti rapidamente tra la home dei clienti
-        e la dashboard del proprietario del ristorante.
-      </p>
-
-      <div class="role-actions" aria-label="Selezione ruolo">
-        <a class="role-button role-button-client" href="fastfood/client-home.html">Vai alla Home Cliente</a>
-        <a class="role-button role-button-owner" href="fastfood/owner-home.html">Vai alla Home Proprietario</a>
+<body class="auth-page login-page">
+  <main class="auth-shell">
+    <section class="auth-card login-card" aria-labelledby="login-title">
+      <div class="auth-intro">
+        <p class="auth-eyebrow">Bentornato su FastFood</p>
+        <h1 id="login-title">Accedi al tuo profilo</h1>
+        <p>
+          Scegli se entrare come cliente per ordinare il tuo piatto preferito o come proprietario
+          per gestire ristorante, menu e ordini.
+        </p>
       </div>
+
+      <form class="auth-form" action="#" method="post">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" placeholder="nome@email.com" required>
+
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password" placeholder="La tua password" required>
+
+        <fieldset class="role-selector">
+          <legend>Come vuoi accedere?</legend>
+          <label class="role-option role-option-client">
+            <input type="radio" name="role" value="cliente" checked>
+            <span>
+              <strong>Cliente</strong>
+              <small>Ordina dai ristoranti vicini</small>
+            </span>
+          </label>
+          <label class="role-option role-option-owner">
+            <input type="radio" name="role" value="proprietario">
+            <span>
+              <strong>Proprietario</strong>
+              <small>Gestisci menu e ordini</small>
+            </span>
+          </label>
+        </fieldset>
+
+        <div class="auth-actions">
+          <a class="auth-submit auth-submit-client" href="fastfood/client-home.html">Entra come cliente</a>
+          <a class="auth-submit auth-submit-owner" href="fastfood/owner-home.html">Entra come proprietario</a>
+        </div>
+      </form>
+
+      <p class="auth-switch">
+        Non hai ancora un account? <a href="signin.html">Registrati qui</a>
+      </p>
     </section>
   </main>
 </body>
