@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FastFood - Home Cliente</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="client">
+  <!-- Header principale con brand e navigazione cliente. -->
+  <header class="client-header">
+    <a class="brand" href="index.html" aria-label="Torna alla scelta ruolo">FastFood</a>
+    <nav class="client-nav" aria-label="Navigazione cliente">
+      <a href="#restaurants">Ristoranti</a>
+      <a href="#featured-dishes">Piatti</a>
+      <a href="#cart">Carrello</a>
+      <a href="#orders">Ordini</a>
+    </nav>
+  </header>
+
+  <main class="client-main">
+    <section class="client-hero">
+      <div>
+        <p class="client-eyebrow">Consegna rapida nella tua zona</p>
+        <h1>Il tuo comfort food preferito, pronto in pochi click.</h1>
+        <p>
+          Esplora ristoranti selezionati, scegli i piatti più amati e prepara il tuo prossimo ordine.
+        </p>
+        <a class="client-cta" href="#restaurants">Scopri i ristoranti</a>
+      </div>
+      <div class="hero-badge" aria-label="Promozione del giorno">
+        <span>🔥</span>
+        <strong>-20%</strong>
+        <small>sui menu del giorno</small>
+      </div>
+    </section>
+
+    <section id="restaurants" class="content-section">
+      <div class="section-heading">
+        <p>Vicino a te</p>
+        <h2>Ristoranti consigliati</h2>
+      </div>
+      <div class="card-grid restaurant-grid">
+        <article class="food-card restaurant-card">
+          <div class="card-icon">🍔</div>
+          <h3>Burger House</h3>
+          <p>Hamburger gourmet, patatine croccanti e salse artigianali.</p>
+          <span class="rating">★ 4.8 · 20 min</span>
+        </article>
+        <article class="food-card restaurant-card">
+          <div class="card-icon">🍕</div>
+          <h3>Pizza Sprint</h3>
+          <p>Pizze fragranti cotte al forno e ingredienti italiani.</p>
+          <span class="rating">★ 4.6 · 25 min</span>
+        </article>
+        <article class="food-card restaurant-card">
+          <div class="card-icon">🥗</div>
+          <h3>Green Bowl</h3>
+          <p>Insalate, bowl proteiche e opzioni fresche per ogni pausa.</p>
+          <span class="rating">★ 4.7 · 18 min</span>
+        </article>
+      </div>
+    </section>
+
+    <section id="featured-dishes" class="content-section">
+      <div class="section-heading">
+        <p>Piatti popolari</p>
+        <h2>In evidenza oggi</h2>
+      </div>
+      <div class="card-grid dish-grid">
+        <article class="food-card dish-card">
+          <div class="dish-image">🍟</div>
+          <h3>Loaded Fries</h3>
+          <p>Patatine con cheddar, bacon croccante e cipollotto.</p>
+          <button type="button">Aggiungi</button>
+        </article>
+        <article class="food-card dish-card">
+          <div class="dish-image">🌮</div>
+          <h3>Taco Mix</h3>
+          <p>Tre taco speziati con pollo, verdure e salsa yogurt.</p>
+          <button type="button">Aggiungi</button>
+        </article>
+        <article class="food-card dish-card">
+          <div class="dish-image">🍰</div>
+          <h3>Cheesecake</h3>
+          <p>Dolce cremoso con topping ai frutti rossi.</p>
+          <button type="button">Aggiungi</button>
+        </article>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
