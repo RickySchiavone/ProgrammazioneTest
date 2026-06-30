@@ -1,50 +1,27 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FastFood | Home</title>
-  <link rel="stylesheet" href="public/css/styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FastFood - Scegli il tuo ruolo</title>
+  <link rel="stylesheet" href="fastfood/css/style.css">
 </head>
-<body>
-  <div class="app-shell">
-    <aside class="sidebar" aria-label="Menu principale">
-      <a class="brand" href="#home" aria-label="FastFood home">
-        <span class="brand-icon">🍽️</span>
-        <span>FastFood</span>
-      </a>
+<body class="role-choice">
+  <!-- Unico punto di ingresso dell'app per scegliere il tipo di esperienza. -->
+  <main class="choice-page">
+    <section class="choice-card" aria-labelledby="app-title">
+      <p class="choice-eyebrow">Ordina, gestisci, cresci</p>
+      <h1 id="app-title">FastFood</h1>
+      <p class="choice-description">
+        Usa questa pagina come unico index per spostarti rapidamente tra la home dei clienti
+        e la dashboard del proprietario del ristorante.
+      </p>
 
-      <nav class="sidebar-nav">
-        <a class="active" href="#home">Home</a>
-        <a href="#menu">Piatti</a>
-        <a href="#orders">Ordini</a>
-        <a href="#profile">Profilo</a>
-      </nav>
-
-      <div class="sidebar-card">
-        <p>Hai fame?</p>
-        <strong>Ordina il tuo piatto preferito in pochi click.</strong>
+      <div class="role-actions" aria-label="Selezione ruolo">
+        <a class="role-button role-button-client" href="fastfood/client-home.html">Vai alla Home Cliente</a>
+        <a class="role-button role-button-owner" href="fastfood/owner-home.html">Vai alla Home Proprietario</a>
       </div>
-    </aside>
-
-    <main id="home" class="home-content">
-      <section class="welcome-card" aria-labelledby="welcome-title">
-        <p class="eyebrow">Benvenuto</p>
-        <h1 id="welcome-title">Scegli cosa ordinare oggi</h1>
-        <p class="lead">
-          Questa sarà la scheda centrale della home: qui verranno mostrate le card dei piatti disponibili da ordinare.
-        </p>
-
-        <div id="menu" class="dish-board" aria-label="Area futura per le card dei piatti">
-          <article class="dish-placeholder">
-            <span>+</span>
-            <h2>Card piatti in arrivo</h2>
-            <p>In seguito aggiungeremo qui immagini, descrizioni, prezzi e pulsanti per ordinare.</p>
-          </article>
-        </div>
-      </section>
-    </main>
-  </div>
-
+    </section>
+  </main>
 </body>
 </html>
