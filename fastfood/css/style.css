@@ -67,7 +67,8 @@ body.auth-page {
   backdrop-filter: blur(12px);
 }
 
-.login-card {
+.login-card,
+.signin-card {
   width: min(760px, 100%);
 }
 
@@ -185,8 +186,7 @@ body.auth-page {
   color: #6f6258;
 }
 
-.auth-actions,
-.signup-grid {
+.auth-actions {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1rem;
@@ -214,6 +214,12 @@ body.auth-page {
 
 .auth-submit-owner {
   background: linear-gradient(135deg, #1565c0, #1e3a5f);
+}
+
+.auth-submit-wide {
+  width: 100%;
+  margin-top: 0.75rem;
+  background: linear-gradient(135deg, #ff7a00, #ffb703);
 }
 
 .auth-switch {
@@ -616,7 +622,6 @@ body.owner {
 @media (max-width: 860px) {
   .auth-actions,
   .role-selector,
-  .signup-grid,
   .client-hero,
   .card-grid,
   .stats-grid,
