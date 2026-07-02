@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FastFood - Registrazione</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="auth-page signin-page">
+  <main class="auth-shell">
+    <section class="auth-card signin-card" aria-labelledby="signin-title">
+      <div class="auth-intro">
+        <p class="auth-eyebrow">Crea il tuo account</p>
+        <h1 id="signin-title">Registrati su FastFood</h1>
+        <p>
+          Usa un'unica scheda per inserire i dati essenziali e scegliere se entrare
+          come cliente o come ristoratore.
+        </p>
+      </div>
+
+      <form class="auth-form" id="signup-form" action="fastfood/client-home.html" method="get">
+        <label for="name">Nome</label>
+        <input id="name" name="name" type="text" placeholder="Il tuo nome" required>
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" placeholder="nome@email.com" required>
+
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password" placeholder="Crea una password" required>
+
+        <fieldset class="role-selector">
+          <legend>Tipologia di utenza</legend>
+          <label class="role-option role-option-client">
+            <input type="radio" name="role" value="cliente" data-target="fastfood/client-home.html" checked>
+            <span>
+              <strong>Cliente</strong>
+              <small>Ordina e segui i tuoi piatti preferiti</small>
+            </span>
+          </label>
+          <label class="role-option role-option-owner">
+            <input type="radio" name="role" value="ristoratore" data-target="fastfood/owner-home.html">
+            <span>
+              <strong>Ristoratore</strong>
+              <small>Gestisci il tuo ristorante su FastFood</small>
+            </span>
+          </label>
+        </fieldset>
+
+        <button class="auth-submit auth-submit-wide" type="submit">Crea account</button>
+      </form>
+
+      <p class="auth-switch">
+        Hai già un account? <a href="index.html">Torna al login</a>
+      </p>
+    </section>
+  </main>
+  <script>
+
+    (() => {
+      const signupForm = document.querySelector('#signup-form');
+      const roleInputs = signupForm.querySelectorAll('input[name="role"]');
+
+      signupForm.addEventListener('submit', () => {
+        const selectedRole = signupForm.querySelector('input[name="role"]:checked');
+        signupForm.action = selectedRole.dataset.target;
+      });
+
+      roleInputs.forEach((roleInput) => {
+        roleInput.addEventListener('change', () => {
+          if (roleInput.checked) {
+            signupForm.action = roleInput.dataset.target;
+          }
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FastFood - Home Ristoratore</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="owner">
+  <div class="owner-layout">
+    <!-- Sidebar gestionale per il proprietario del ristorante. -->
+    <aside class="owner-sidebar" aria-label="Navigazione ristoratore">
+      <a class="owner-brand" href="../index.html">FastFood</a>
+      <nav class="owner-nav">
+        <a class="active" href="#dashboard">Dashboard</a>
+        <a href="#menu">Menu</a>
+        <a href="#dishes">Piatti</a>
+        <a href="#orders">Ordini</a>
+        <a href="#stats">Statistiche</a>
+      </nav>
+    </aside>
+
+    <main id="dashboard" class="owner-content">
+      <header class="owner-topbar">
+        <div>
+          <p class="owner-eyebrow">Area ristoratore</p>
+          <h1>Dashboard del ristorante</h1>
+        </div>
+        <button class="owner-primary-button" type="button">Aggiungi piatto</button>
+      </header>
+
+      <section class="restaurant-summary">
+        <div>
+          <p>Riepilogo ristorante</p>
+          <h2>Burger House Centro</h2>
+          <span>Aperto oggi · 11:30 - 23:00</span>
+        </div>
+        <div class="summary-status">Valutazione media <strong>4.8/5</strong></div>
+      </section>
+
+      <section id="stats" class="stats-grid" aria-label="Statistiche principali">
+        <article class="stat-card">
+          <span>Ordini oggi</span>
+          <strong>128</strong>
+          <p>+18% rispetto a ieri</p>
+        </article>
+        <article class="stat-card">
+          <span>Piatti venduti</span>
+          <strong>342</strong>
+          <p>Top seller: Classic Burger</p>
+        </article>
+        <article class="stat-card">
+          <span>Incasso stimato</span>
+          <strong>€ 2.450</strong>
+          <p>Media ordine: € 19,14</p>
+        </article>
+      </section>
+
+      <section id="orders" class="management-grid">
+        <article class="panel-card">
+          <h2>Ordini recenti</h2>
+          <ul class="order-list">
+            <li><span>#1048</span><strong>In preparazione</strong></li>
+            <li><span>#1047</span><strong>Pronto</strong></li>
+            <li><span>#1046</span><strong>Consegnato</strong></li>
+          </ul>
+        </article>
+        <article id="dishes" class="panel-card">
+          <h2>Piatti più venduti</h2>
+          <ul class="dish-list">
+            <li>Classic Burger <span>86</span></li>
+            <li>Loaded Fries <span>64</span></li>
+            <li>Chicken Wrap <span>51</span></li>
+          </ul>
+        </article>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
